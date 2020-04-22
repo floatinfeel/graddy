@@ -1,0 +1,23 @@
+[
+    {
+        "name" : "buddy 1",
+        "email" : "email 1",
+        "phone_number" : "0987654321",
+        "username": "Username1",
+        "password": "password1"
+    },
+    {
+        "name" : "buddy 2",
+        "email" : "email 2",
+        "phone_number" : "0987654321",
+        "username": "Username2",
+        "password": "password2"
+    },
+    {
+        "name" : "buddy 3",
+        "email" : "email 3",
+        "phone_number" : "0987654321",
+        "username": "Username3",
+        "password": "password3"
+    }
+]

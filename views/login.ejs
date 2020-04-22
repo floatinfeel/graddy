@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+<style>
+    * {
+       font-family: Arial, Helvetica, sans-serif; 
+    }
+    body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+    }
+</style>
+<body>
+    <div>
+        <h1> GRADDY </h1>
+
+        <form action="/login" method="POST">
+            <label for="role">Acces Card</label> <br>
+            <select name="role" id="role">
+                <option value="student">student</option>
+                <option value="instructor">Instructor</option>
+                <option value="admin">Admin</option>
+            </select> <br>
+            <label for="username"> Username </label> <br>
+            <input type="text" name="username"> <br>
+            <label for="password"> Password </label> <br>
+            <input type="text" name="password"> <br>
+            <button type="submit" > Login </button>
+        </form>
+    </div>
+</body>
+</html>

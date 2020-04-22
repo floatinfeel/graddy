@@ -1,0 +1,35 @@
+[
+    {
+    "name": "students 1",
+    "email": "email 1",
+    "phone_number": "0987654321",
+    "username": "Username",
+    "password" : "password",
+    "BuddyId": 3
+    },
+    {
+    "name": "students 2",
+    "email": "email 2",
+    "phone_number": "0987654321",
+    "username": "Username2",
+    "password" : "password",
+    "BuddyId": 2
+    },
+    {
+    "name": "students 3",
+    "email": "email 3",
+    "phone_number": "0987654321",
+    "username": "Username3",
+    "password" : "password",
+    "BuddyId": 2
+    },
+    {
+    "name": "students 4",
+    "email": "email 4",
+    "phone_number": "0987654321",
+    "username": "Username4",
+    "password" : "password",
+    "BuddyId": 1
+    }
+    
+]
