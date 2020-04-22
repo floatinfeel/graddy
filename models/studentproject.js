@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
 
   StudentProject.associate = function(models) {
     // associations can be defined here
-     StudentProject.belongsTo(models.Student, { foreignKey: "StudentId", targetKey: "id" });
+    StudentProject.belongsTo(models.Student, { foreignKey: "StudentId", targetKey: "id" });
     StudentProject.belongsTo(models.Project, { foreignKey: "ProjectId", targetKey: "id" });
     StudentProject.belongsTo(models.Budd, { foreignKey: "BuddyId", targetKey: "id" });
   };

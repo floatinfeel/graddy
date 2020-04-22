@@ -1,5 +1,7 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
+  const Model = sequelize.Sequelize.Model
+  class Budd extends Model {}
 
   Budd.init({
     name: DataTypes.STRING,
@@ -14,9 +16,7 @@ module.exports = (sequelize, DataTypes) => {
 
   Budd.associate = function(models) {
     // associations can be defined here
-
-    Budd.hasMany(models.Student, {foreignKey: 'BuddyId'})
-    
+    Budd.hasMany(models.Student, { foreignKey : 'BuddyId' })
   };
   return Budd;
 };

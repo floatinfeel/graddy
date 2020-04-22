@@ -1,0 +1,23 @@
+[
+    {
+        "name" : "project1",
+        "nilai" : 56
+    },
+    {
+        "name" : "project2",
+        "nilai" : 90
+    },
+    {
+        "name" : "project3",
+        "nilai" : 45
+    },
+    {
+        "name" : "project4",
+        "nilai" : 80
+    },
+    {
+        "name" : "project5",
+        "nilai" : 89
+    }
+    
+]
