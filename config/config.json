@@ -1,0 +1,10 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "friend",
+    "database": "graddy",
+    "host": "localhost",
+    "dialect": "postgres",
+    "operatorsAliases": false
+  }
+}
