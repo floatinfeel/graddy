@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashboard</title>
+    <style>
+        * {
+           
+        }
+        body {
+            background-color: whitesmoke;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: space-around;
+        }
+        div {
+            border: 0 1px  solid black;
+            width: 100%;
+        }
+        th,td {
+            padding: 3px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>List Instructors</h1>
+        <button><a href="/instructor/add"> ADD INSTRUCTOR </a></button> | <button><a href="/instructor"> OPTION </a></button><br> <br>
+        <table border>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% buddy.forEach(element => { %>
+                    <tr>
+                        <td><%= element.id %> </td>
+                        <td><%= element.name %> </td>
+                        <td><%= element.email %> </td>
+                        <td><%= element.phone_number %> </td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <h1> List Student </h1>
+        <button><a href="/student/add"> ADD STUDENT </a></button> | <button><a href="/student"> OPTION </a></button><br> <br>
+        <table border>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% student.forEach(element => { %>
+                    <tr>
+                        <td><%= element.id %> </td>
+                        <td><%= element.name %> </td>
+                        <td><%= element.email %> </td>
+                        <td><%= element.phone_number %> </td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <h1>List Project</h1>
+        <button><a href="/project/add"> ADD PROJECT </a></button> | <button><a href="/project"> OPTION </a></button> <br> <br>
+        <table border>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nama Project</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% project.forEach(element => { %>
+                    <tr>
+                        <td><%= element.id %> </td>
+                        <td><%= element.name %> </td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
