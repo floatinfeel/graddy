@@ -37,13 +37,20 @@ class System {
             })
             .catch(err=> res.send(err))
         } else if (req.body.role=='admin') {
-            res.send(`masuk admin`)
-            // Model.Budd.findAll({
-            // })
-            // .then(data=> {
-            //     res.send(data)
-            // })
-            // .catch(err=> res.send(err))
+            Model.Admin.findOne({
+                where : {
+                    username : req.body.username,
+                    password : req.body.password,
+                }
+            })
+            .then(data=> {
+                if(data) {
+                    res.redirect(`/admin/${data.id}`)
+                } else {
+                    res.send('wrong user/password')
+                }
+            })
+            .catch(err=> res.send(err))
         } 
     }
 }

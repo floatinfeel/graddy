@@ -9,6 +9,8 @@ class Buddy {
             include : [Model.Project,Model.Budd,Model.Student]
         })
         .then(data=> {
+            console.log(data)
+            res.render("instructorHome",{ data })
             res.send(data)
         })
         .catch(err=>res.send(err));
