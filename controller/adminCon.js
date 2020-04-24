@@ -46,6 +46,26 @@ class Admin {
             .catch(err=>res.send(err))
     }
 
+    static insDetail (req,res) {
+        Model.StudentProject.findAll({
+            where : {
+                BuddyId : req.params.id
+            },
+            include : [Model.Project,Model.Budd,Model.Student]
+        })
+        .then(result=> {
+            if( result.length <=0 ) {
+                res.send('Instructur ini belum di tugaskan ')
+            } else if (result[0].Student==null) {
+                let error = 'Instruktur ini belum memiliki student'
+                res.render("insDetail", { error , result} )
+            } else {
+                res.render("insDetail", { result , error : null } )
+            }
+        })
+        .catch(err=>res.send(err));
+    }
+
 }
 
 module.exports = Admin;

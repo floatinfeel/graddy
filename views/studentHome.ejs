@@ -4,10 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Students data</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            background-color: whitesmoke;
+        }
+        .left {
+            width: 30%;
+        }
+        .rigth {
+            width: 33%;
+        }
+        .lefter {
+            padding-left: 50px;
+        }
+        .totalscore {
+            color: rgb(134, 0, 78);
+            font-size: 100px;
+            margin-top: -30px;
+        }
+    </style>
 </head>
 <body>
-    <h1>
-        this is students home
-    </h1>
+    <div class="left">
+        <h1> Student Profile </h1>
+        <h2>Name : </h2>
+        <h3><%= data[0].Student.name %> </h3>
+        <h2>Email :  </h2>
+        <h3><%= data[0].Student.email %></h3>
+        <h2>Phone Number : </h2>
+        <h3><%= data[0].Student.phone_number %> </h3>
+    </div>
+    <div class="rigth"> 
+        <div>
+            <h1> Your Progress </h1>
+            <!-- <canvas id="score" width="70%" height="50%" > </canvas> -->
+            <table border>
+                <tr>
+                    <td><strong>Project Name</strong> </td>
+                    <td><strong>Nilai</strong> </td>
+                </tr>
+                <% data.forEach(element => { %>
+                    <tr>
+                        <td><%= element.Project.name %> </td>
+                        <td><%= element.Project.nilai %> </td>
+                    </tr>
+                <% }) %>
+            </table>
+        </div>
+        <div >
+            <h1>Your Peformance</h1>
+            <canvas id="score" width="80%" height="70%"></canvas>
+            
+        </div>
+        
+    </div>
+
+    <div class="lefter">
+        <h1>Message Box</h1>
+        <p>You don't have any message</p>  <br> <br> <br>
+        <% 
+        var total = 0
+        var count = 0
+        data.forEach(element => { 
+            count++
+            total+=element.Project.nilai  %> 
+        <% }) %> 
+        <div>
+            <h1>Total Score</h1>
+            <p class="totalscore"> <%= total/count %>  </p>
+        </div>
+            
+        <canvas id="circel"></canvas>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+    <script>
+        let score = document.getElementById('score');
+        let linechart = new Chart (score, {
+            type : 'bar',
+            data: {
+        labels: ['Project1', 'Project2', 'Project3', 'Project4', 'Project5', 'Project6'],
+        datasets: [{
+            label: 'Detail',
+            data: [70, 100, 75, 84, 77, 92],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 2
+        }]
+    }
+        })
+    </script>
 </body>
 </html>

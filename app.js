@@ -15,13 +15,17 @@ app.post('/login',System.validation)
 // Admin routes
 app.get('/admin',Admin.home)
 app.get('/admin/:id',Admin.home)
-app.get('/instructor',Admin.showIns)
-app.get('/instructor/add',Admin.addIns)
-app.post('/instructor/add',Admin.postAdd)
+app.get('/admin/instructor/show',Admin.showIns)
+app.get('/admin/instructor/add',Admin.addIns)
+app.post('/admin/instructor/add',Admin.postAdd)
+app.get('/admin/instructor/detail/:id',Admin.insDetail)
 // student routes
-app.get('/student',Student.show)
+app.get('/student/:id',Student.show)
 // buddy routes
 app.get('/instructor/:id',Buddy.show)
+app.get('/instructor/student/:id/:sid',Buddy.studentDetail)
+app.get('/instructor/student/score/:iid/:sid/:pid',Buddy.editScore)
+app.post('/instructor/student/score/:iid/:sid/:pid',Buddy.postScore)
 
 
 

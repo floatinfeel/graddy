@@ -19,7 +19,7 @@
                     <th>Username</th>
                     <th>Password</th>
                     <th>Phone Number</th>
-                    <th colspan="3">Action</th>
+                    <th colspan="4">Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -31,7 +31,8 @@
                         <td><%= element.password %> </td>
                         <td><%= element.email %> </td>
                         <td><%= element.phone_number %> </td>
-                        <td><button><a href="/">DETAIL</a></button></td>
+                        <td><button><a href="/admin/instructor/detail/<%=element.id%>">DETAIL</a></button></td>
+                        <td><button><a href="/admin/instructor/detail/deploy/<%=element.id%>">DEPLOY</a></button></td>
                         <td><button><a href="/">EDIT</a></button></td>
                         <td><button><a href="/">DELETE</a></button></td>
                     </tr>

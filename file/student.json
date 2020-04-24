@@ -5,22 +5,22 @@
     "phone_number": "0987654321",
     "username": "Username",
     "password" : "password",
-    "BuddyId": 3
+    "BuddyId": 1
     },
     {
     "name": "students 2",
     "email": "email 2",
     "phone_number": "0987654321",
     "username": "Username2",
-    "password" : "password",
-    "BuddyId": 2
+    "password" : "password2",
+    "BuddyId": 1
     },
     {
     "name": "students 3",
     "email": "email 3",
     "phone_number": "0987654321",
     "username": "Username3",
-    "password" : "password",
+    "password" : "password4",
     "BuddyId": 2
     },
     {
@@ -28,8 +28,40 @@
     "email": "email 4",
     "phone_number": "0987654321",
     "username": "Username4",
-    "password" : "password",
-    "BuddyId": 1
+    "password" : "password4",
+    "BuddyId": 2
+    },
+    {
+    "name": "students 5",
+    "email": "email 5",
+    "phone_number": "0987654321",
+    "username": "Username5",
+    "password" : "password6",
+    "BuddyId": 3
+    },
+    {
+    "name": "students 6",
+    "email": "email 6",
+    "phone_number": "0987654321",
+    "username": "Username6",
+    "password" : "password6",
+    "BuddyId": 3
+    },
+    {
+    "name": "students 7",
+    "email": "email 7",
+    "phone_number": "0987654321",
+    "username": "Username7",
+    "password" : "password7",
+    "BuddyId": 4
+    },
+    {
+    "name": "students 8",
+    "email": "email 8",
+    "phone_number": "0987658321",
+    "username": "Username8",
+    "password" : "password8",
+    "BuddyId": 4
     }
     
 ]

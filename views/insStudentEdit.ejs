@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit score</title>
+</head>
+<body>
+    <h2>Edit Score </h2>
+    <form action="/instructor/student/score/<%= iid %>/<%= sid %>/<%= data.id %> " method="POST">
+        <label for="name">Project Name | </label>
+        <label for="nilai"><%= data.name %></label> <br>
+        <label for="score">Score</label>
+        <input type="text" value="<%= data.nilai %> " name="nilai"> <br>
+        <button type="submit" >SUBMIT</button> <button><a href="/instructor/student/<%= iid %>/<%= sid %> ">CANCEL</a></button>
+    </form>
+</body>
+</html>
