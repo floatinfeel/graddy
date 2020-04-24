@@ -15,7 +15,7 @@ class System {
             })
             .then(data=> {
                 if(data) {
-                    res.redirect('/student')
+                    res.redirect(`/student/${data.id}`)
                 } else {
                     res.send('no match')
                 }
