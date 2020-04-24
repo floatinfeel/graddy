@@ -1,9 +1,16 @@
 {
   "development": {
-    "username": "godzi",
-    "password": "satu1234",
-    "database": "graddy",
+    "username": "postgres",
+    "password": "friend",
+    "database": "graddy-app",
     "host": "localhost",
+    "dialect": "postgres"
+  },
+  "production":{
+  	"username": "gariskgzpnyvwh",
+    "password": "ca63e8db2492352396d7bf235a44215c05efcff88524bf50a2595b3c243714c7",
+    "database": "db1nlq0b3cdv0d",
+    "host": "ec2-34-193-232-231.compute-1.amazonaws.com",
     "dialect": "postgres"
   }
 }
